@@ -1,8 +1,9 @@
 import { createContext, useContext, useReducer } from 'react';
 import reducer from './reducer';
 
-const initialState = { currentUser: null,};
-
+const initialState = { currentUser: null, openLogin:false, loading:false,
+alert:{open:false, severity:'info', message:''}};
+console.log('Contextprovider.js---initialstate', initialState)
 const Context = createContext(initialState);
 
 export const useValue = () => {  return useContext(Context);   };
